@@ -18,7 +18,7 @@ public class TysAmazingModItems {
 	public static final Item BESTEST_ITEM = new BestestItem(new QuiltItemSettings()
 		.maxCount(43)
 		.rarity(Rarity.EPIC));
-
+	//I have no idea what I'm doing
 	public static void register(ModContainer mod)
 	{
 		Registry.register(Registries.ITEM, new Identifier(mod.metadata().id(), "bestest_item"), BESTEST_ITEM);

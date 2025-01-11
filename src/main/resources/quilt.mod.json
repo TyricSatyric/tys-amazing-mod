@@ -17,7 +17,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.gggamesxdlol.tys_amazing_mod.TysAmazingMod"
+			"init": "io.github.gggamesxdlol.tys_amazing_mod.TysAmazingMod",
+			"client_init": "io.github.gggamesxdlol.tys_amazing_mod.TysAmazingModClient"
 		},
 		"depends": [
 			{
