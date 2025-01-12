@@ -1,5 +1,6 @@
-package io.github.gggamesxdlol.tys_amazing_mod;
+package io.github.TyricSatyric.tys_amazing_mod;
 
+import net.fabricmc.fabric.api.entity.event.v1.EntityElytraEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -15,16 +16,27 @@ import java.util.Random;
 
 
 public class TysAmazingModItems {
-	public static final Item BESTEST_ITEM = new BestestItem(new QuiltItemSettings()
+	public static final BestestItem BESTEST_ITEM = new BestestItem(new QuiltItemSettings()
 		.maxCount(43)
 		.rarity(Rarity.EPIC));
+	public static final BestestSword BESTEST_SWORD = new BestestSword(ToolMaterials.NETHERITE,
+		2147000000,
+		2147000000,
+		new QuiltItemSettings()
+			.rarity(Rarity.EPIC)
+			.maxDamage(-1));
+	public static BowItem BESTTEST = new BowItem(new QuiltItemSettings());
 	//I have no idea what I'm doing
 	public static void register(ModContainer mod)
 	{
 		Registry.register(Registries.ITEM, new Identifier(mod.metadata().id(), "bestest_item"), BESTEST_ITEM);
+		Registry.register(Registries.ITEM, new Identifier(mod.metadata().id(), "bestest_sword"), BESTEST_SWORD);
+		Registry.register(Registries.ITEM, new Identifier(mod.metadata().id(), "besttest"), BESTTEST);
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries ->
 		{
 			entries.addItem(BESTEST_ITEM);
+			entries.addItem(BESTEST_SWORD);
+			entries.addItem(BESTTEST);
 		});
 	}
 }

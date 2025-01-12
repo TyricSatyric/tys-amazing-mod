@@ -1,4 +1,4 @@
-package io.github.gggamesxdlol.tys_amazing_mod;
+package io.github.TyricSatyric.tys_amazing_mod;
 
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;

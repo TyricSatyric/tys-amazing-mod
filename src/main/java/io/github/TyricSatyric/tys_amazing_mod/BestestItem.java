@@ -1,4 +1,4 @@
-package io.github.gggamesxdlol.tys_amazing_mod;
+package io.github.TyricSatyric.tys_amazing_mod;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

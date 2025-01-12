@@ -1,6 +1,6 @@
-package io.github.gggamesxdlol.tys_amazing_mod.mixin;
+package io.github.TyricSatyric.tys_amazing_mod.mixin;
 
-import io.github.gggamesxdlol.tys_amazing_mod.TysAmazingMod;
+import io.github.TyricSatyric.tys_amazing_mod.TysAmazingMod;
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

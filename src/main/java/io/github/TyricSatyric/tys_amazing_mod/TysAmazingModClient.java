@@ -1,4 +1,4 @@
-package io.github.gggamesxdlol.tys_amazing_mod;
+package io.github.TyricSatyric.tys_amazing_mod;
 
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer;

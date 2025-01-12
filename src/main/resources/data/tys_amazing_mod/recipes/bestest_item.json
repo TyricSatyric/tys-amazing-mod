@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RZR",
+    "ZWZ",
+    "RZR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:emerald"
+    },
+    "Z": {
+      "item": "minecraft:copper_ingot"
+    },
+    "W": {
+      "item": "minecraft:beacon"
+    }
+  },
+  "result": {
+    "item": "tys_amazing_mod:bestest_item",
+    "count": 1
+  }
+}

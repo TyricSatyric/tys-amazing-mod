@@ -8,17 +8,17 @@
 			"name": "Ty's Amazing Mod",
 			"description": "This mod is awesome",
 			"contributors": {
-				"GGGamesXDlol": "Creator"
+				"TyricSatyric": "Creator"
 			},
 			"contact": {
-				"discord": "gggamesxdlol"
+				"discord": "tyric_satyric"
 			},
 			"icon": "assets/example_mod/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.gggamesxdlol.tys_amazing_mod.TysAmazingMod",
-			"client_init": "io.github.gggamesxdlol.tys_amazing_mod.TysAmazingModClient"
+			"init": "io.github.TyricSatyric.tys_amazing_mod.TysAmazingMod",
+			"client_init": "io.github.TyricSatyric.tys_amazing_mod.TysAmazingModClient"
 		},
 		"depends": [
 			{
