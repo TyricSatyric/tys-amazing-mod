@@ -55,6 +55,7 @@ public class BestestSword extends BowItem implements Vanishable, BowExtensions {
 		{
 			playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 		}
+		TysAmazingMod.LOGGER.info("henlo!");
 	}
 
 
@@ -62,20 +63,8 @@ public class BestestSword extends BowItem implements Vanishable, BowExtensions {
 	@Override
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 		ItemStack itemStack = user.getStackInHand(hand);
-		TysAmazingMod.LOGGER.info(String.valueOf(timerTicks));
-		timerTicks++;
-		if (timerTicks == 10)
-		{
-			world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+		user.setCurrentHand(hand);
 
-			if (!world.isClient) {
-				BestestItemEntity bestestItemEntity = new BestestItemEntity(world, user);
-				bestestItemEntity.setProperties(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
-				world.spawnEntity(bestestItemEntity);
-			}
-
-			timerTicks = 0;
-		}
 		return TypedActionResult.success(itemStack);
 	}
 
@@ -97,6 +86,24 @@ public class BestestSword extends BowItem implements Vanishable, BowExtensions {
 	public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		stack.damage(1, attacker, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
 		return true;
+	}
+
+	@Override
+	public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
+		TysAmazingMod.LOGGER.info(String.valueOf(timerTicks));
+		timerTicks++;
+		if (timerTicks == 10)
+		{
+			world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+
+			if (!world.isClient) {
+				BestestItemEntity bestestItemEntity = new BestestItemEntity(world, user);
+				bestestItemEntity.setProperties(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
+				world.spawnEntity(bestestItemEntity);
+			}
+
+			timerTicks = 0;
+		}
 	}
 
 	@Override

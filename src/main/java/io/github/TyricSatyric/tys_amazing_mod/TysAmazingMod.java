@@ -1,5 +1,7 @@
 package io.github.TyricSatyric.tys_amazing_mod;
 
+import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.RegistryKey;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
