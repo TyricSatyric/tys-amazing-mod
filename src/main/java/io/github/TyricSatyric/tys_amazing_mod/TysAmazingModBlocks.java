@@ -1,10 +1,12 @@
 package io.github.TyricSatyric.tys_amazing_mod;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.Block;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
@@ -15,12 +17,13 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class TysAmazingModBlocks {
-	public static final ChangingToolBlock TEST_BLOCK = new ChangingToolBlock(
-		(ArrayList<net.minecraft.registry.tag.TagKey<net.minecraft.block.Block>>)
-			Arrays.asList(BlockTags.AXE_MINEABLE, BlockTags.PICKAXE_MINEABLE),
-		QuiltBlockSettings.create());
+	public static final ChangingToolBlock TEST_BLOCK = new ChangingToolBlock(List.of(BlockTags.AXE_MINEABLE, BlockTags.PICKAXE_MINEABLE),
+		QuiltBlockSettings.create()
+			.requiresTool()
+			.strength(2f));
 	public static void register(ModContainer mod)
 	{
 		Registry.register(Registries.BLOCK, new Identifier(mod.metadata().id(), "changing_block"), TEST_BLOCK);

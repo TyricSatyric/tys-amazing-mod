@@ -20,7 +20,7 @@ public class TysAmazingMod implements ModInitializer {
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
 
 		TysAmazingModEntities.register();
-		TysAmazingModBlocks.register(	mod);
+		TysAmazingModBlocks.register(mod);
 		TysAmazingModItems.register(mod);
 	}
 }
