@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tys_amazing_mod:block/changing_block"
+  }
+}
