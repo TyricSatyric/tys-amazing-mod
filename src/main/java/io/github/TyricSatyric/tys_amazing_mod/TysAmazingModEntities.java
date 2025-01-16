@@ -1,17 +1,11 @@
 package io.github.TyricSatyric.tys_amazing_mod;
 
-import com.mojang.datafixers.DataFixer;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityDimensions;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-import net.minecraft.feature_flags.FeatureFlagBitSet;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
-import org.quiltmc.loader.api.ModContainer;
-import org.quiltmc.qsl.entity.impl.QuiltEntityType;
 
 public class TysAmazingModEntities {
 	public static final EntityType<BestestItemEntity> BESTEST_ITEM_ENTITY = Registry.register(
