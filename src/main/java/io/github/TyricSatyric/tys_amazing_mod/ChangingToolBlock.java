@@ -50,7 +50,10 @@ public class ChangingToolBlock extends BlockWithEntity implements BlockEntityPro
 
 	public boolean neededToolIsUseful(TagKey<Block> usedTool, ChangingToolBlock block)
 	{
-
+		if (blockEntity == null)
+		{
+			return false;
+		}
 		return blockEntity.currentEffectiveTool == usedTool;
 	}
 
