@@ -31,9 +31,11 @@ public class MiningToolMixin {
 	public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
 		if(state.getBlock() instanceof ChangingToolBlock block)
 		{
-			assert stack.getEntityHolder() != null;
-			return block.neededToolIsUseful(effectiveBlocks, stack.getEntityHolder().getWorld(), stack.getEntityHolder()) ? this.miningSpeed : 1.0F;
+
+			return block.neededToolIsUseful(effectiveBlocks, block) ? this.miningSpeed : 1.0F;
 		}
 		return state.isIn(this.effectiveBlocks) ? this.miningSpeed : 1.0F;
 	}
+
+
 }

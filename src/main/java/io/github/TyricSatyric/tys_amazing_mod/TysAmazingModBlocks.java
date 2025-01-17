@@ -1,5 +1,6 @@
 package io.github.TyricSatyric.tys_amazing_mod;
 
+import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroups;
@@ -23,6 +24,7 @@ public class TysAmazingModBlocks {
 
 	public static void register(ModContainer mod)
 	{
+		AttackBlockCallback.EVENT.register(ChangingToolBlock::onAttacked);
 		Registry.register(Registries.BLOCK, new Identifier(mod.metadata().id(), "changing_block"), CHANGING_BLOCK);
 		Registry.register(Registries.ITEM, new Identifier(mod.metadata().id(), "changing_block"), new BlockItem(CHANGING_BLOCK, new QuiltItemSettings()));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR_UTILITIES).register(entries -> {
